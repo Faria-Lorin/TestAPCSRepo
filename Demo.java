@@ -30,6 +30,8 @@ public class Demo{
       }
     return sum;
   }
+
+
   public static String arrayDeepToString(int[][] arr){
     String duo = "{";
     for (int i = 0; i < arr.length; i++){
@@ -41,14 +43,52 @@ public class Demo{
       duo += "}";
       return duo;
   }
+
+  public static int[][] create2DArray( int rows, int cols, int maxValue){
+    int values[][] = new int[rows][cols];
+     for (int i = 0; i <= rows; i++)
+     {
+        for (int j = 1; j <= cols; j++)
+        {
+          values[i][j] = ((int)Math.random() * ((maxValue) - 0 + 1) + 0);
+        }
+     }
+     return values;
+}
+public static int[][] create2DArrayRandomized( int rows, int cols, int maxValue){
+  int values[][] = new int[rows][];
+   for (int i = 0; i <= rows; i++)
+   {
+      for (int j = 1; j <= ((int)Math.random() * ((cols +1) - 0 + 1) + 0); j++)
+      {
+        values[i][j] = ((int)Math.random() * ((maxValue) - 0 + 1) + 0);
+      }
+   }
+   return values;
+}
+
   public static void main(String[] args) {
-    /*if (args.length == 0){
+   if (args.length == 0){
       Demo.printLoop(5);
     }
     Demo.printLoop(Integer.parseInt(args[0]));
+
+    /*
     int[] arr = {1,2,3,4,5};
-    System.out.println(Demo.arrToString(arr));*/
+    System.out.println(Demo.arrToString(arr));
+
     int[][] arr2 = {{1, 2, 3}, {}, {8, 2, 3, 1}, {1}};
     System.out.println(Demo.arrayDeepToString(arr2));
+
+    System.out.println((Demo.arrayDeepToString(Demo.create2DArray(10, 7, 3)))); I'm having a bit of an issue with one, the file compiles,
+                                                                                but there is an Out of Bounds error. I think it might be
+                                                                                because of an error I made in the code that had to with the colums,
+                                                                                but I only used cols once and I'm not sure what I did wrong.
+
+    System.out.println((Demo.arrayDeepToString(Demo.create2DArrayRandomized(9,9,9)))); This also shows an error. The error says Null Pointer Exception
+                                                                                       The lines that it points out are 13, 38, and 88. For line 13, where
+                                                                                       if the the array had a length of 0, it's supposed to return an empty set.
+    */
+
     }
   }
