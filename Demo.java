@@ -30,13 +30,25 @@ public class Demo{
       }
     return sum;
   }
-
+  public static String arrayDeepToString(int[][] arr){
+    String duo = "{";
+    for (int i = 0; i < arr.length; i++){
+      duo += Demo.arrToString(arr[i]);
+      if (i != arr.length - 1){
+        duo += ", ";
+      }
+        }
+      duo += "}";
+      return duo;
+  }
   public static void main(String[] args) {
-    if (args.length == 0){
+    /*if (args.length == 0){
       Demo.printLoop(5);
     }
     Demo.printLoop(Integer.parseInt(args[0]));
     int[] arr = {1,2,3,4,5};
-    System.out.println(Demo.arrToString(arr));
+    System.out.println(Demo.arrToString(arr));*/
+    int[][] arr2 = {{1, 2, 3}, {}, {8, 2, 3, 1}, {1}};
+    System.out.println(Demo.arrayDeepToString(arr2));
     }
   }
