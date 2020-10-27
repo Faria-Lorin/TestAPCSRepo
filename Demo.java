@@ -59,9 +59,9 @@ public static int[][] create2DArrayRandomized( int rows, int cols, int maxValue)
   int values[][] = new int[rows][];
    for (int i = 0; i < rows; i++)
    { int col = (int)(Math.random()*cols);
-     values[i] = new int[col];
-      for (int j = 0; j < col; j++)
-      { values[j] = new int[col + 1];
+     values[i] = new int[col + 1];
+     for (int j = 0; j < col; j++)
+      {
         values[i][j] = (int)(Math.random()*maxValue);
       }
    }
