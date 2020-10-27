@@ -58,11 +58,10 @@ public class Demo{
 public static int[][] create2DArrayRandomized( int rows, int cols, int maxValue){
   int values[][] = new int[rows][];
    for (int i = 0; i < rows; i++)
-   {
-      values[i] = new int[i+1];
-      int col = (int)(Math.random()*cols);
+   { int col = (int)(Math.random()*cols);
+     values[i] = new int[col];
       for (int j = 0; j < col; j++)
-      {
+      { values[j] = new int[col + 1];
         values[i][j] = (int)(Math.random()*maxValue);
       }
    }
