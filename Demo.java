@@ -3,8 +3,8 @@ public class Demo{
     for(int i = 1; i <= n; i++){
       for(int j = i; j <= n; j++){
          System.out.print(i);
-      System.out.println();
     }
+    System.out.println();
   }
 }
   public static String arrToString(int[]arr){
@@ -46,22 +46,23 @@ public class Demo{
 
   public static int[][] create2DArray( int rows, int cols, int maxValue){
     int values[][] = new int[rows][cols];
-     for (int i = 0; i <= rows; i++)
+     for (int i = 0; i < rows; i++)
      {
-        for (int j = 1; j <= cols; j++)
+        for (int j = 1; j < cols; j++)
         {
-          values[i][j] = ((int)Math.random() * ((maxValue) - 0 + 1) + 0);
+          values[i][j] = (int)(Math.random()*maxValue);
         }
      }
      return values;
 }
 public static int[][] create2DArrayRandomized( int rows, int cols, int maxValue){
   int values[][] = new int[rows][];
-   for (int i = 0; i <= rows; i++)
+  int col = (int)(Math.random()*cols);
+   for (int i = 0; i < rows; i++)
    {
-      for (int j = 1; j <= ((int)Math.random() * ((cols +1) - 0 + 1) + 0); j++)
+      for (int j = 0; j < col; j++)
       {
-        values[i][j] = ((int)Math.random() * ((maxValue) - 0 + 1) + 0);
+        values[i][j] = (int)(Math.random()*maxValue);
       }
    }
    return values;
