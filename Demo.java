@@ -79,14 +79,8 @@ public static int[][] create2DArrayRandomized( int rows, int cols, int maxValue)
     System.out.println(Demo.arrToString(arr));
     int[][] arr2 = {{1, 2, 3}, {}, {8, 2, 3, 1}, {1}};
     System.out.println(Demo.arrayDeepToString(arr2));
-    System.out.println((Demo.arrayDeepToString(Demo.create2DArray(10, 7, 3)))); I'm having a bit of an issue with one, the file compiles,
-                                                                                but there is an Out of Bounds error. I think it might be
-                                                                                because of an error I made in the code that had to with the colums,
-                                                                                but I only used cols once and I'm not sure what I did wrong.
-    System.out.println((Demo.arrayDeepToString(Demo.create2DArrayRandomized(9,9,9)))); This also shows an error. The error says Null Pointer Exception
-                                                                                       The lines that it points out are 13, 38, and 88. For line 13, where
-                                                                                       if the the array had a length of 0, it's supposed to return an empty set.
+    System.out.println((Demo.arrayDeepToString(Demo.create2DArray(10, 7, 3))));
+    System.out.println((Demo.arrayDeepToString(Demo.create2DArrayRandomized(9,9,9))));
     */
-
     }
   }
